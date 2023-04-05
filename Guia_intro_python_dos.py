@@ -236,3 +236,57 @@ def es_multiplo (num1, num2):
 
 # Definir las funciones que creas necesarias.
 
+def socios_fundadores ():
+    socios = {
+        1: {'nombre': 'Florencia', 'apellido': 'Ocampo', 'fecha_ingreso': '14092001', 'cuota_al_dia': True},
+        2: {'nombre': 'David', 'apellido': 'Estévez', 'fecha_ingreso': '14092001', 'cuota_al_dia': True},
+        3: {'nombre': 'Sofía', 'apellido': 'Cáceres', 'fecha_ingreso': '14092001', 'cuota_al_dia': True}
+    }
+    return socios
+
+def socios_nuevos (socios):
+    numero_socio = int(input("Ingrese su numero de socio"))
+    nombre = int(input("Ingrese su nombre"))
+    apellido = int(input("Ingrese su apellido"))
+    fecha_ingreso = int(input("Ingrese su fecha de ingreso"))
+    cuota_al_dia = input("La cuota está al día? (s/n): ").lower() == 's'
+    socios[numero_socio] = {'nombre': nombre, 'apellido': apellido, 'fecha_ingreso': fecha_ingreso, 'cuota_al_dia': cuota_al_dia}
+    print("Socio cargado con éxito.")
+
+def informar_cantidad_socios(socios):
+    cantidad = len(socios)
+    print(f"El club tiene {cantidad} socios.")
+    
+def registrar_pago_cuotas(socios):
+    num_socio = int(input("Ingrese el número de socio: "))
+    socio = socios.get(num_socio)
+    if socio:
+        socio['cuota_al_dia'] = True
+        print("Se han registrado el pago de todas las cuotas del socio.")
+    else:
+        print("El número de socio ingresado no existe.")
+        
+def modificar_fecha_ingreso(socios):
+    for num_socio, socio in socios.items():
+        if socio['fecha_ingreso'] == '21102017':
+            socio['fecha_ingreso'] = '22102017'
+    print("Se han modificado las fechas de ingreso correctamente.")
+    
+def dar_de_baja_socio(socios):
+    nombre = input("Ingrese el nombre del socio: ")
+    apellido = input("Ingrese el apellido del socio: ")
+    for num_socio, socio in socios.items():
+        if socio['nombre'] == nombre and socio['apellido'] == apellido:
+            del socios[num_socio]
+            print("Socio dado de baja con éxito.")
+            return
+    print("El socio ingresado no existe.")
+
+def imprimir_listado_socios(socios):
+    print("Listado de socios:")
+    for num_socio, socio in socios.items():
+        print(f"Socio número {num_socio}: {socio['nombre']} {socio['apellido']}, ingresó el {socio['fecha_ingreso']}, cuota al día: {socio['cuota_al_dia']}")
+
+    
+socios = socios_fundadores ()
+while True:
