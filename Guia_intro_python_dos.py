@@ -290,3 +290,4 @@ def imprimir_listado_socios(socios):
     
 socios = socios_fundadores ()
 while True:
+    
