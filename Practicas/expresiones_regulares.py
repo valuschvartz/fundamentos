@@ -135,3 +135,8 @@ def dos_P(lista):
             print(resultado.group())
 lista = ["Práctica Python","Práctica C++", "Práctica Fortran"]
 dos_P(lista)
+
+# Ejercicio 15
+import re
+def validar_mail (mail):
+    return bool(re.search("[a-zA-Z0-9]+[-_\.]*[a-zA-Z0-9]+@[a-zA-Z]{2,9}(\.[a-zA-z]{2,4})",mail))
