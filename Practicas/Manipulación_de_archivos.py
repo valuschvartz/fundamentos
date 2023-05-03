@@ -45,6 +45,13 @@ def cantidad_palabras(archivo):
 # Escribí un programa que lea un archivo, 
 # reemplace una letra por esa misma letra más un salto de línea y lo guarde en otro archivo.
 
+def reemplazar_letra (archivo, archivo_dos, letra):
+    with open (archivo, "r") as file:
+        with open (archivo_dos, "w") as file_2:
+            for n in file:
+                n = n.replace(letra, letra+'\n')
+            file_2.write(n)
+
 #  **Ejercicio 6**
 # Realizá un programa que lea un archivo, 
 # elimine todos los saltos de línea y lo guarde en otro archivo.
@@ -90,8 +97,23 @@ join_files("archivo1.txt","archivo2.txt","archivos_unidos.txt")
 # Recordá que la frecuencia es la relación entre número de veces 
 # que aparece la palabra en cuestión con respecto a la cantidad total de palabras.
 
+def frecuencia (archivo):
+    with open (archivo, "r") as file:
+        fileContent = file.readlines()
+        for fileline in fileContent: 
+            hola = 1 + hola
+            
+            
+
+
 #  **Ejercicio 10**
-# # Escribí un programa que lea todos los archivos .txt de 
+# Escribí un programa que lea todos los archivos .txt de 
 # una carpeta dada (**Carpeta1**) y los añada a un archivo dentro de 
 # la carpeta _Resultado_, que a su vez se tiene que encontrar dentro de **Carpeta1**.
 
+import glob, os
+def leer_archivos (archivos):
+    txt= glob.glob (".txt")
+    
+    with open (archivos, "a") as file:
+        

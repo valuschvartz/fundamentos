@@ -63,6 +63,25 @@ def join_files(file1,file2,file3):
         f3.write(f1.read()+f2.read())
 join_files("archivo1.txt","archivo2.txt","archivos_unidos.txt")
 
+
+#Ejercicio repaso 3/5
+#Definir un procedimiento que lea los archivos .txt que estan en la carpeta de marzo, y copie la primera
+#lineaa de cada uno en un archivo dentro de la carpeta resultados (que debe estar dentro de new)
+import os, glob
+
+def primeras_lineas ():
+    os.chdir("Marzo")
+    txt = glob.glob(".txt")
+    primera_linea = []
+    for archivo in txt:
+        with open(archivo, "r") as file: 
+            fila_completa = file.readline()
+            primera_linea.append(fila_completa)
+    os.chdir("../../") 
+    os.mkdir("Resultado")
+    with open ("Resultado/Lista.txt", "a") as salida:
+        for linea in primera_linea:
+            salida.write(linea)
 #12/04
 #Guia Expresiones Regulares
 #
