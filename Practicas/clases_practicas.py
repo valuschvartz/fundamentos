@@ -63,7 +63,6 @@ def join_files(file1,file2,file3):
         f3.write(f1.read()+f2.read())
 join_files("archivo1.txt","archivo2.txt","archivos_unidos.txt")
 
-
 #Ejercicio repaso 3/5
 #Definir un procedimiento que lea los archivos .txt que estan en la carpeta de marzo, y copie la primera
 #lineaa de cada uno en un archivo dentro de la carpeta resultados (que debe estar dentro de new)
