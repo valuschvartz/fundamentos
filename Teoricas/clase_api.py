@@ -15,11 +15,4 @@ Tarea:
 Armar la ruta /prendas que muestre todos los ítems de prendas
 prendas = [{"id":1,"tipo":"pantalon","talle":42},{"id":2,"tipo":"pantalon","talle":42}"etc"]
 """
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route("/items")
-def items():
-  return jsonify(prendas)
 
