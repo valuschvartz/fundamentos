@@ -12,7 +12,7 @@ app = Flask(__name__)
 #Primer endpoint de la app:
 @app.route("/") #decorador, generamos el /home
 def home():
-    return render_template ("home.html")
+    return render_template("home.html")
 
 #como dominio vamos a usar un puerto/ip
 #Para ver el front hacemos ctrl + click en el link (todo esto en la terminal)
