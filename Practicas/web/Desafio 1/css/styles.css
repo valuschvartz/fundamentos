@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+section{
+    background-color: #bdb2ff ;
+    width: 1366px;
+    height: auto;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cuadro_verde_arriba{
+    width: 950px;
+    height: 60px;
+    background-color: #aef496;
+    border: 3px solid rgb(0,0,0);
+    border-bottom-width: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.circulo_rojo {
+    width: 30px;
+    height: 30px;
+    background-color: #f27070;
+}
